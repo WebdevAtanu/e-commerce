@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Mock Store</title>
+		<link rel="stylesheet" href="./bootstrap/bootstrap.min.css">
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<!-- ======================overlay================= -->
+		<div class="overlay" id="overlay">
+			<div class="container d-flex align-items-center flex-column mt-5">
+				<h1 class="text-center">Bootstrap Project</h1>
+				<h1 class="text-center">Mock API Loading, Please Wait...</h1>
+				<div class="text-center">
+					<div class="spinner-border text-warning" role="status">
+						<span class="visually-hidden">Loading...</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- ======================navbar================= -->
+		<nav class="navbar navbar-expand-lg bg-dark">
+			<div class="container-fluid">
+				<a class="navbar-brand"><span><img src="logo.png" alt=""></span></a>
+				<button class="toggler_btn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+				<span class=""><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+					<path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+				</svg></span>
+				</button>
+				<div class="collapse navbar-collapse justify-content-between" id="navbarNavDropdown">
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a class="nav-link text-white" href="#">HOME</a>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+								ITEMS
+							</a>
+							<ul class="dropdown-menu">
+								<li><h5 class="text-center">Men</h5></li>
+								<li><a class="dropdown-item" href="#">T-shirt</a></li>
+								<li><a class="dropdown-item" href="#">Jacket</a></li>
+								<li><a class="dropdown-item" href="#">Winter Wear</a></li>
+								<li><h5 class="text-center">Women</h5></li>
+								<li><a class="dropdown-item" href="#">Jacket</a></li>
+								<li><a class="dropdown-item" href="#">Winter Wear</a></li>
+								<li><a class="dropdown-item" href="#">Jwellery</a></li>
+								<li><h5 class="text-center">Electronics</h5></li>
+								<li><a class="dropdown-item" href="#">Storage Device</a></li>
+								<li><a class="dropdown-item" href="#">Monitor</a></li>
+							</ul>
+						</li>
+						<form class="d-flex" role="search">
+							
+							<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+							<button class="btn search_btn" type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+								<path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+							</svg></button>
+						</form>
+						
+					</ul>
+					<div id="cart_user">
+						<button class="btn cart_btn" type="button" data-bs-toggle="modal" data-bs-target="#logger" aria-controls="offcanvasExample" id="cartBTN">
+						<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+							<path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+							<path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+						</svg>
+						</button>
+						<button class="btn cart_btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#the_cart" aria-controls="offcanvasExample" id="cartBTN">
+						<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">
+							<path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/>
+						</svg>
+						</button>
+					</div>
+				</div>
+				
+			</div>
+		</nav>
+		<!-- ======================welcome================= -->
+		<div class="container-fluid mb-2" id="welcome">
+			<div class="row">
+				<div class="col-md-8">
+					<div class="container p-2">
+						<h3>Welcome to our e-commerce platform, where shopping meets convenience and style! Dive into a world of endless possibilities as you explore our curated collection of products designed to cater to your every need. Whether you're searching for trendy fashion pieces, cutting-edge gadgets, or home essentials, we've got you covered. With seamless navigation, secure transactions, and exceptional customer service, your online shopping experience is about to reach new heights. Join us as we redefine the art of shopping, one click at a time.</h3>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="container d-flex justify-content-center align-items-center" id="shopping">
+						<img src="shop.png" alt="">
+					</div>
+				</div>
+			</div>
+			
+			
+			
+			<img src="wave.png" alt="" class="mt-3">
+		</div>
+		<!-- ======================main container================= -->
+		<div class="container-fluid">
+			<div class="row g-2" id="main"></div>
+		</div>
+		<!-- ======================footer================= -->
+		<div class="container-fluid bg-dark p-2 mt-5">
+			<p class="text-light text-center">Made with <span class="text-danger">❤</span> and <a href="https://fakestoreapi.com/" class="text-decoration-none text-info" target="_blank">FakeStoreAPI</a></p>
+		</div>
+		<!-- ======================cart================= -->
+		<div class="offcanvas offcanvas-start" tabindex="-1" id="the_cart" aria-labelledby="offcanvasExampleLabel">
+			<div class="offcanvas-header">
+				<h5 class="offcanvas-title" id="offcanvasExampleLabel">My Cart</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+			</div>
+			<div class="offcanvas-body">
+				<div>
+					<h3>Your cart is empty</h3>
+					<p class="text-primary">Pick up where you left off</p>
+				</div>
+			</div>
+		</div>
+		<!-- ======================modal================= -->
+		<div class="modal fade" id="logger" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h1 class="modal-title fs-5" id="exampleModalLabel"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-people" viewBox="0 0 16 16">
+							<path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1zm-7.978-1L7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002-.014.002zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4m3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0M6.936 9.28a6 6 0 0 0-1.23-.247A7 7 0 0 0 5 9c-4 0-5 3-5 4q0 1 1 1h4.216A2.24 2.24 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816M4.92 10A5.5 5.5 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0m3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4"/>
+						</svg></h1>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<div class="container modal_body">
+							<div class="container d-flex justify-content-center">
+								<button class="btns addborder" id="login">Login</button>
+								<button class="btns" id="sign">Signup</button>
+							</div>
+							<div class="container" id="login_form">
+								<form action="#" method="post">
+									<div class="mb-2">
+										<label for="logemail" class="form-label">Email address</label>
+										<input type="email" class="form-control" id="logemail" aria-describedby="emailHelp" required>
+										<div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+									</div>
+									<div class="mb-2">
+										<label for="logpass" class="form-label">Password</label>
+										<input type="password" class="form-control" id="logpass" required>
+									</div>
+									<div class="text-center">
+										<button type="submit" class="btn btn-primary">Login</button>
+										<button type="reset" class="btn btn-primary">Reset</button>
+									</div>
+								</form>
+							</div>
+							<div class="container hidden_class" id="sign_form">
+								<form action="#" method="post">
+									<div class="mb-2">
+										<label for="name" class="form-label">Name</label>
+										<input type="text" class="form-control" id="name" required>
+									</div>
+									<div class="mb-2">
+										<label for="email" class="form-label">Email address</label>
+										<input type="email" class="form-control" id="email" aria-describedby="emailHelp" required>
+										<div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+									</div>
+									<div class="mb-2">
+										<label for="password" class="form-label">Password</label>
+										<input type="password" class="form-control" id="password" required>
+									</div>
+									<div class="text-center">
+										<button type="submit" class="btn btn-primary">Sign Up</button>
+										<button type="reset" class="btn btn-primary">Reset</button>
+									</div>
+									
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+<script src="./bootstrap/bootstrap.bundle.min.js"></script>
+<script src="app.js"></script>
+</html>

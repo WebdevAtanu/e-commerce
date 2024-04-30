@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap');
+
+body {
+	font-family: "Alegreya", serif;
+}
+
+/*intro overlay==================================*/
+.overlay {
+	width: 100%;
+	height: 100vh;
+	background: white;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 5;
+
+	h1 {
+		font-size: 3.5rem;
+	}
+
+}
+
+.fading {
+	animation: fade 1s linear forwards;
+}
+
+@keyframes fade {
+	from {
+		opacity: 1;
+	}
+
+	to {
+		opacity: 0;
+		display: none;
+	}
+
+}
+
+/*navbar==================================*/
+nav {
+	.navbar-brand{
+		width:5%;
+		img{
+			width:100%;
+		}
+
+	}
+	.search_btn svg,
+	.cart_btn svg {
+		color: white;
+		&:hover{
+			color:#fa9b25;
+		}
+	}
+	.nav-item a:hover{
+		color:#fa9b25 !important;
+	}
+
+	.toggler_btn {
+		background: transparent;
+		display: none;
+
+		svg {
+			color: white;
+		}
+
+	}
+
+	.navbar-collapse {
+		transition: all 0.5s;
+	}
+
+}
+
+/*welcome==================================*/
+#welcome {
+
+	/*	font-family: "Merienda", cursive;*/
+	height: 100%;
+	h3{
+		text-align:center;
+	}
+	img {
+		width: 100%;
+	}
+
+	#shopping {
+		background: url("blob.png");
+		background-repeat: no-repeat;
+		background-position: center;
+		height: 100%;
+
+		img {
+			width: 100%;
+		}
+
+	}
+
+}
+
+/*product cards==================================*/
+.card {
+	width: 100%;
+	height: 100%;
+	border: none;
+	box-shadow: 0px 0px 3px 0px;
+
+	& img {
+		width: 95%;
+		aspect-ratio: 1 / 0.7;
+		margin: auto;
+	}
+
+	.name {
+		font-size: 1.3rem;
+	}
+
+	.desc {
+		font-size: 0.8rem;
+	}
+
+	sup {
+		font-size: 0.50em;
+		top: -.2em;
+	}
+
+	.rating {
+		& svg {
+			color: green;
+		}
+
+		.raters {
+			float: right;
+		}
+
+	}
+
+	.price {
+		font-size: 1.5rem;
+	}
+
+	.buttons {
+		a {
+			width: 50%;
+		}
+
+	}
+
+}
+
+/*cart==================================*/
+.offcanvas {
+	transition: all 0.5s;
+
+	.offcanvas-body {
+		background-image: url(./cart.gif);
+		background-position: center;
+		background-size: 100%;
+		background-repeat: no-repeat;
+	}
+
+}
+
+/*user modal==================================*/
+.modal_body {
+	.btns {
+		border: none;
+		background: none;
+		width: 50%;
+		margin-bottom: 0.5rem;
+	}
+
+	.addborder {
+		border-bottom: 2px solid black;
+	}
+
+	.hidden_class {
+		display: none;
+	}
+
+}
+
+/*responsive==================================*/
+@media screen and (max-width:990px) {
+	nav {
+		.toggler_btn {
+			display: block;
+		}
+
+		.dropdown-menu {
+			background: transparent;
+			border: none;
+
+			& li a {
+				color: white;
+			}
+
+		}
+
+	}
+
+	#cart_user button {
+		border: 1px solid white;
+		width: 45%;
+		margin: 5px auto;
+	}
+
+	#welcome h3 {
+		font-size: 1.2rem;
+	}
+
+}
