@@ -17,6 +17,7 @@ body {
 
 	h1 {
 		font-size: 3.5rem;
+		color: orange;
 	}
 
 }
@@ -39,22 +40,33 @@ body {
 
 /*navbar==================================*/
 nav {
-	.navbar-brand{
-		width:5%;
-		img{
-			width:100%;
+	position: sticky !important;
+	top: 0;
+	z-index: 4;
+}
+
+nav {
+	.navbar-brand {
+		width: 5%;
+
+		img {
+			width: 100%;
 		}
 
 	}
+
 	.search_btn svg,
 	.cart_btn svg {
 		color: white;
-		&:hover{
-			color:#fa9b25;
+
+		&:hover {
+			color: #fa9b25;
 		}
+
 	}
-	.nav-item a:hover{
-		color:#fa9b25 !important;
+
+	.nav-item a:hover {
+		color: #fa9b25 !important;
 	}
 
 	.toggler_btn {
@@ -71,6 +83,10 @@ nav {
 		transition: all 0.5s;
 	}
 
+	#site_name {
+		display: none;
+	}
+
 }
 
 /*welcome==================================*/
@@ -78,9 +94,16 @@ nav {
 
 	/*	font-family: "Merienda", cursive;*/
 	height: 100%;
-	h3{
-		text-align:center;
+
+	h3 {
+		text-align: center;
+
+		span {
+			color: rgb(250 152 38);
+		}
+
 	}
+
 	img {
 		width: 100%;
 	}
@@ -192,10 +215,16 @@ nav {
 			background: transparent;
 			border: none;
 
-			& li a {
+			& li a,
+			h5 {
 				color: white;
 			}
 
+		}
+
+		#site_name {
+			display: block;
+			font-size: 1.7rem;
 		}
 
 	}

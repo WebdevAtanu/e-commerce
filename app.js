@@ -22,7 +22,7 @@ window.onload = () => {
 	</div>
 	`;
             document.getElementById("main").appendChild(div);
-            div.setAttribute("class", "col-sm-12 col-md-6 col-lg-3");
+            div.setAttribute("class", "col-sm-12 col-md-6 col-lg-3 products");
         }
 
     });
@@ -42,3 +42,18 @@ document.getElementById("login").addEventListener("click", () => {
 setTimeout(() => {
     document.getElementById("overlay").classList.add("fading");
 }, 3000);
+
+let sbox = document.getElementById("searchBox");
+sbox.addEventListener("input", (e) => {
+    var product = document.querySelectorAll(".products");
+    var inp = e.target.value.toLowerCase();
+    product.forEach(item => {
+        var names = item.textContent.toLowerCase();
+        if (names.includes(inp)) {
+            item.style.display = "block";
+        } else {
+            item.style.display = "none";
+        }
+    });
+
+});
