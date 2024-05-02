@@ -20,6 +20,10 @@ body {
 		color: orange;
 	}
 
+	img {
+		width: 30%;
+	}
+
 }
 
 .fading {
@@ -85,6 +89,9 @@ nav {
 
 	#site_name {
 		display: none;
+	}
+	#cart_info{
+		
 	}
 
 }
@@ -181,6 +188,47 @@ nav {
 		background-position: center;
 		background-size: 100%;
 		background-repeat: no-repeat;
+
+		/*cart==================================*/
+		#the_cart {
+			display: flex;
+			            align-items: center;
+			gap: 1rem;
+			            padding: 0.5rem;
+            margin-top: 0.5rem;
+			    border: 0.5px solid grey;
+			    transition:all 0.3s;
+			    &:hover{
+			    	background:#80808017;
+			    }
+
+			& img {
+				width: 30%;
+			}
+
+			& p {
+				color: black;
+				font-weight: bold;
+				margin: 0;
+			}
+			button{
+				border:none;
+				background:none;
+				transition:all 0.3s;
+				&:hover{
+					color:red;
+					transform:scale(1.2);
+				}
+			}
+
+		}
+
+		#check_btn {
+			position: sticky;
+			bottom: 0;
+			display: none;
+		}
+
 	}
 
 }
