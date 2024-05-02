@@ -255,6 +255,9 @@ nav {
 /*responsive==================================*/
 @media screen and (max-width:990px) {
 	nav {
+  .navbar-brand {
+        width: 20%;
+}
 		.toggler_btn {
 			display: block;
 		}
