@@ -23,7 +23,7 @@ window.onload = () => {
 	</div>
 	`;
             document.getElementById("main").appendChild(div);
-            div.setAttribute("class", "col-sm-12 col-md-6 col-lg-3 products");
+            div.setAttribute("class", "col-sm-6 col-md-6 col-lg-3 products");
         }
 
     });
