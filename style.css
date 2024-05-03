@@ -17,7 +17,7 @@ body {
 
 	h1 {
 		font-size: 3.5rem;
-		color: orange;
+		color: rgb(249 133 47);
 	}
 
 	img {
@@ -280,6 +280,31 @@ nav {
 
 }
 
+/*user swiper==================================*/
+#user_contain {
+	background: #80808012;
+	padding: 1rem;
+
+	hr {
+		width: 50%;
+		margin: 1rem auto;
+	}
+
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+	color: black;
+}
+
+/*footer==================================*/
+#footer {
+	span svg {
+		color: rgb(255 153 87);
+	}
+
+}
+
 /*responsive==================================*/
 @media screen and (max-width:990px) {
 	nav {
@@ -307,6 +332,10 @@ nav {
 			font-size: 1.7rem;
 		}
 
+		#cart_user {
+			margin-top: 1rem;
+		}
+
 	}
 
 	#cart_user button {
@@ -315,8 +344,9 @@ nav {
 		margin: 5px auto;
 	}
 
-	#welcome h3 {
-		font-size: 1.5rem;
-	}
+	.happy_user {
+		p {
+			font-size: 1rem;
+		}
 
-}
+	}
