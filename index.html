@@ -5,13 +5,14 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Mock Store</title>
 		<link rel="stylesheet" href="./bootstrap/bootstrap.min.css">
+		<link rel="stylesheet" href="./swiper/swiper-bundle.min.css">
 		<link rel="stylesheet" href="style.css">
 	</head>
 	<body>
 		<!-- ======================overlay================= -->
 		<div class="overlay" id="overlay">
 			<div class="container d-flex align-items-center flex-column mt-5">
-				<h1 class="text-center">Mock Store</h1>
+				<h1 class="text-center">Mockyard</h1>
 				<h3 class="text-center">API Loading...</h3>
 				
 				<div class="text-center">
@@ -20,7 +21,7 @@
 					</div>
 				</div>
 				<h6 class="text-center mt-5">Powered By</h6>
-				 <span class="text-center"><img src="bootstrap.png" alt=""></span>
+				<span class="text-center"><img src="bootstrap.png" alt=""></span>
 			</div>
 		</div>
 		
@@ -28,7 +29,6 @@
 		<nav class="navbar navbar-expand-lg bg-dark">
 			<div class="container-fluid">
 				<a class="navbar-brand"><span><img src="logo.png" alt=""></span></a>
-				<p class="text-white mb-0" id="site_name">Mock Store</p>
 				<button class="toggler_btn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 				<span class=""><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
 					<path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
@@ -38,24 +38,6 @@
 					<ul class="navbar-nav">
 						<li class="nav-item">
 							<a class="nav-link text-white" href="#">HOME</a>
-						</li>
-						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-								ITEMS
-							</a>
-							<ul class="dropdown-menu">
-								<li><h5 class="text-center">Men</h5></li>
-								<li><a class="dropdown-item" href="#">T-shirt</a></li>
-								<li><a class="dropdown-item" href="#">Jacket</a></li>
-								<li><a class="dropdown-item" href="#">Winter Wear</a></li>
-								<li><h5 class="text-center">Women</h5></li>
-								<li><a class="dropdown-item" href="#">Jacket</a></li>
-								<li><a class="dropdown-item" href="#">Winter Wear</a></li>
-								<li><a class="dropdown-item" href="#">Jwellery</a></li>
-								<li><h5 class="text-center">Electronics</h5></li>
-								<li><a class="dropdown-item" href="#">Storage Device</a></li>
-								<li><a class="dropdown-item" href="#">Monitor</a></li>
-							</ul>
 						</li>
 						<div class="d-flex" role="search">
 							
@@ -77,8 +59,8 @@
 						<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">
 							<path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/>
 						</svg>
-						<span class="position-absolute top-0  translate-middle badge rounded-pill bg-warning" id="cart_info">
-							
+						<span class="position-absolute top-0  translate-middle badge rounded-pill bg-primary" id="cart_info">
+							00
 						</span>
 						</button>
 						
@@ -87,12 +69,17 @@
 				
 			</div>
 		</nav>
+		<!-- alert -->
+		<div id="alerts" class="fixed-bottom">
+			
+		</div>
 		<!-- ======================welcome================= -->
 		<div class="container-fluid mb-2" id="welcome">
 			<div class="row">
 				<div class="col-md-8">
 					<div class="container p-2">
-						<h3>Welcome to <span>Mock Store</span>, where shopping meets convenience and style! Dive into a world of endless possibilities as you explore our curated collection of products designed to cater to your every need. Whether you're searching for trendy fashion pieces, cutting-edge gadgets, or home essentials, we've got you covered. With seamless navigation, secure transactions, and exceptional customer service, your online shopping experience is about to reach new heights. Join us as we redefine the art of shopping.</h3>
+						<h3 class="text-center">Welcome to <span>Mockyard Book Shop</span></h3>
+						<h5 class="text-center mt-3">Here knowledge is not just acquired but celebrated! Our bookstore is a haven for learners, educators, and curious minds alike, offering a curated collection of books designed to inspire, inform, and enlighten. From textbooks that unlock the mysteries of science to guides that delve deep into history's lessons, we provide the tools for intellectual growth and exploration. Step into a world of learning possibilities and let your curiosity guide you through our vast array of educational resources.</h5>
 					</div>
 				</div>
 				<div class="col-md-4">
@@ -109,6 +96,20 @@
 		<!-- ======================main container================= -->
 		<div class="container-fluid">
 			<div class="row g-2" id="main"></div>
+		</div>
+		<!-- ======================user================= -->
+		<div class="container mt-5">
+			<h4 class="mb-3 text-center">Our Happy Customers</h4>
+			<div class="swiper">
+				<div class="swiper-wrapper" id="users">
+				</div>
+				<!-- If we need pagination -->
+				<div class="swiper-pagination"></div>
+				<!-- If we need navigation buttons -->
+				<div class="swiper-button-prev"></div>
+				<div class="swiper-button-next"></div>
+			</div>
+			
 		</div>
 		<!-- ======================footer================= -->
 		<div class="container-fluid bg-dark p-2 mt-5">
@@ -127,7 +128,7 @@
 					<div class="container mt-3" id="cart_elem">
 					</div>
 					<div class="text-center mt-3">
-					<button class="btn btn-outline-primary" id="check_btn">Check out</button>
+						<button class="btn btn-outline-primary" id="check_btn">Check out</button>
 					</div>
 				</div>
 			</div>
@@ -196,20 +197,20 @@
 		<!-- ========Search==================== -->
 		<div class="toast-container position-fixed top-0 end-0 p-3">
 			<div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-				<div class="toast-header bg-primary text-white">
-					<!-- <img src="..." class="rounded me-2" alt="..."> -->
-					<strong class="me-auto">Search</strong>
-					<small>Just Now</small>
-					<button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+				
+				<div class="alert alert-danger alert-dismissible fade show float-end" role="alert">
+					<strong>Type something in search box.</strong>
+					<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 				</div>
-				<div class="toast-body">
-					Type Product Names.
-				</div>
+				
 			</div>
 		</div>
 	</div>
 </div>
 </body>
 <script src="./bootstrap/bootstrap.bundle.min.js"></script>
+<script src="./swiper/swiper-bundle.min.js"></script>
+<script src="product.js"></script>
+<script src="user.js"></script>
 <script src="app.js"></script>
 </html>
